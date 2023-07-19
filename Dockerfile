@@ -8,4 +8,4 @@ RUN sudo sed -i.bak -e 's%http://deb.debian.org/debian %http://ftp.riken.jp/Linu
  && sudo apt install -y \
       nano vim git iputils-ping net-tools telnet php \
       zlib1g-dev build-essential libssl-dev libyaml-dev \
-      libmagickwand-dev imagemagick wget
+      libmagickwand-dev imagemagick wget dnsutils
