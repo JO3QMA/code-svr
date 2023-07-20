@@ -1,4 +1,4 @@
-FROM codercom/code-server:latest 
+FROM codercom/code-server:latest
 ENV TZ=Asia/Tokyo
 
 RUN sudo sed -i.bak -e 's%http://deb.debian.org/debian %http://ftp.riken.jp/Linux/debian/debian/ %g' /etc/apt/sources.list \
