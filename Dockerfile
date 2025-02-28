@@ -1,7 +1,9 @@
-FROM codercom/code-server:latest
+#FROM codercom/code-server:4.89.0-debian
+FROM codercom/code-server:ubuntu
 ENV TZ=Asia/Tokyo
 
-RUN sudo sed -i.bak -e 's%http://deb.debian.org/debian %http://ftp.riken.jp/Linux/debian/debian/ %g' /etc/apt/sources.list \
+#RUN sudo sed -i.bak -e 's%http://deb.debian.org/debian %http://ftp.riken.jp/Linux/debian/debian/ %g' /etc/apt/sources.list \
+RUN sudo ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime\
  && sudo apt update \
  && sudo apt upgrade -y \
  && sudo apt autoremove -y \
